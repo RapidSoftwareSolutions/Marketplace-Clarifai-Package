@@ -92,7 +92,7 @@ Adds Inputs. You are limited to sending 128 inputs at a time.
 | Field                                   | Type            | Description
 |-----------------------------------------|-----------------|----------
 | accessToken                             | credentials     | This is used to authorize your access to the API.
-| inputs                                  | JSON            | Can be a single media object or an array of media objects (max of 128 inputs/call; passing > 128 will throw an exception). See README for more info.
+| inputs                                  | JSON            | Can be a single media object or an array of media objects (max of 128 inputs/call; passing > 128 will throw an exception). 
 | inputs[].input                          | object          | If string, is given, this is assumed to be an image url
 | inputs[].input.data.image.base64        | string          | Can be a publicly accessibly url (base64 or url is required)
 | inputs[].input.data.image.url           | string          | Can be a publicly accessibly url or base64 string representing image bytes (base64 or url is required)
@@ -182,7 +182,7 @@ Merge concepts to inputs in bulk
 | Field                                        | Type       | Description
 |----------------------------------------------|------------|----------
 | accessToken                                  | credentials| This is used to authorize your access to the API.
-| inputs                                       | JSON       | List of concepts to update (max of 128 inputs/call; passing > 128 will throw an exception). See README for more info.
+| inputs                                       | JSON       | List of concepts to update (max of 128 inputs/call; passing > 128 will throw an exception). 
 | inputs[].input                               | object     | 
 | inputs[].input.id                            | string     | The id of the input to update
 | inputs[].input.data.metadata                 | object     | Object with key values to attach to the input (optional)
@@ -231,7 +231,7 @@ Delete concepts to inputs in bulk
 | Field                                        | Type       | Description
 |----------------------------------------------|------------|----------
 | accessToken                                  | credentials| This is used to authorize your access to the API.
-| inputs                                       | JSON       | JSON Array of concepts to update (max of 128 inputs/call; passing > 128 will throw an exception). See README for more info.
+| inputs                                       | JSON       | JSON Array of concepts to update (max of 128 inputs/call; passing > 128 will throw an exception). 
 | inputs[].input                               | object     | 
 | inputs[].input.id                            | string     | The id of the input to update
 | inputs[].input.data.concepts                 | string     | Object with keys explained below:
@@ -279,7 +279,7 @@ Overwrite inputs in bulk
 | Field                                   | Type       | Description
 |-----------------------------------------|------------|----------
 | accessToken                             | credentials| This is used to authorize your access to the API.
-| inputs                                  | JSON       | List of concepts to update (max of 128 inputs/call; passing > 128 will throw an exception). See README for more info
+| inputs                                  | JSON       | List of concepts to update (max of 128 inputs/call; passing > 128 will throw an exception). 
 | inputs[].input                          | object     | 
 | inputs[].input.id                       | string     | The id of the input to update
 | inputs[].input.data.metadata            | object     | Object with key values to attach to the input (optional)
@@ -371,7 +371,7 @@ Remove concepts from a model
 |----------------------|------------|----------
 | accessToken          | credentials| This is used to authorize your access to the API.
 | id                   | String     | The id of the model to apply changes to
-| concepts             | JSON       | List of concept objects with id. See README for more info.
+| concepts             | JSON       | List of concept objects with id. 
 | concepts[].concept.id| String     | The id of the concept to delete.
 
 #### `concepts` field example: 
@@ -386,7 +386,7 @@ Once you have trained a model you are ready to use your new model to get predict
 |---------------------------|------------|----------
 | accessToken               | credentials| This is used to authorize your access to the API.
 | id                        | string     | Model's id
-| inputs                    | JSON       | An array of Inputs Objects. See README for more info.
+| inputs                    | JSON       | An array of Inputs Objects. 
 | inputs[].data.image       | object     | Object with keys explained below:
 | inputs[].data.image.url   | string     | Can be a publicly accessibly url (url or base64 is required)
 | inputs[].data.image.base64| string     | Base64 string representing image bytes (url or base64 is required)
@@ -427,7 +427,7 @@ You can create your own model and train it with your own images and concepts. On
 | accessToken              | credentials| This is used to authorize your access to the API.
 | modelId                  | string     | Model id
 | modelName                | string     | Model name
-| conceptsData             | JSON       | List of objects with ids, concept id strings or an instance of Concepts object. See README for more info.
+| conceptsData             | JSON       | List of objects with ids, concept id strings or an instance of Concepts object. 
 | conceptsMutuallyExclusive| boolean    | Do you expect to see more than one of the concepts in this model in the SAME image? Set to false (default) if so. Otherwise, set to true.
 | closedEnvironment        | boolean    | Do you expect to run the trained model on images that do not contain ANY of the concepts in the model? Set to false (default) if so. Otherwise, set to true.
 

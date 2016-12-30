@@ -345,7 +345,9 @@ Search for inputs or outputs based on concepts or images
 #### queries field example: 
 ```json
 "queries": [{
-	"image": "http://path.to/image.jpg"
+	"image": {
+		"url": "http://path.to/image.jpg"
+	}
 }]
 ```
 

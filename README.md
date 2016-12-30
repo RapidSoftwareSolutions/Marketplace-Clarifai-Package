@@ -501,13 +501,13 @@ If you would like to delete all models associated with an application, you can a
 | modelId        | String     | If of model to delete
 | versionId      | String     | The model's version id
 
-## ClarifaiV2.deleteAllModels
+## ClarifaiV2.deleteModel
 Deletes model by id
 
 | Field          | Type       | Description
 |----------------|------------|----------
 | accessToken    | credentials| This is used to authorize your access to the API.
-| ids            | String     | Can be a single string or an array of strings representing the model ids
+| id             | String     | Model's id
 
 ## ClarifaiV2.deleteAllModels
 Deletes all models

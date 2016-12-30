@@ -952,7 +952,7 @@ res.status(200).send({
       ]
     },
     {
-      "name": "deleteAllModels",
+      "name": "deleteModel",
       "description": "Deletes model by id",
       "args": [
         {
@@ -962,8 +962,8 @@ res.status(200).send({
           "required": true
         },
         {
-          "name": "ids",
-          "info": "Can be a single string or an array of strings representing the model ids",
+          "name": "id",
+          "info": "Model's id",
           "type": "String",
           "required": false
         }

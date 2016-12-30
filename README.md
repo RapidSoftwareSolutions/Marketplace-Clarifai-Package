@@ -131,6 +131,7 @@ With crop:
     }
   }
 }]
+```
 
 With custom metadata: 
 ```json

@@ -145,6 +145,7 @@ With custom metadata:
     }
   }
 }]
+```
 
 ## ClarifaiV2.deleteInputs
 Deletes list of inputs.

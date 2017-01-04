@@ -1,6 +1,6 @@
 "use strict";
 
-global.PACKAGE_NAME = "ClarifaiV2";
+global.PACKAGE_NAME = "Clarifai";
 
 global.RapidError = function(code, fields) {
 

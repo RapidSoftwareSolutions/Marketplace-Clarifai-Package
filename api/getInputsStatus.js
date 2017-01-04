@@ -12,7 +12,7 @@ module.exports = (req, res) => {
         id
     } = req.body.args;
         
-    let required = lib.parseReq({accessToken, id});
+    let required = lib.parseReq({accessToken});
     
     if(required.length > 0) 
         throw new RapidError('REQUIRED_FIELDS', required);

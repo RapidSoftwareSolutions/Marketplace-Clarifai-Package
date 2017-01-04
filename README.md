@@ -363,7 +363,9 @@ Merge concepts to a model
 
 #### `concepts` field example: 
 ```json
-"concepts": ["c1", "c2"]
+"concepts": [{
+  "id": "conceptid"
+}]
 ```
 
 ## ClarifaiV2.removeModelConcepts
@@ -378,7 +380,9 @@ Remove concepts from a model
 
 #### `concepts` field example: 
 ```json
-"concepts": ["c1", "c2"]
+"concepts": [{
+  "id": "conceptid"
+}]
 ```
 
 ## ClarifaiV2.predictModel
@@ -477,7 +481,7 @@ To get a specific model version, you must provide the modelId as well as the ver
 | modelId        | String     | The model's id
 | versionId      | String     | The model version's id
 
-## ClarifaiV2.getModelTrainingInputsByVersion
+## ClarifaiV2.getModelTrainingInputs
 You can list all the inputs that were used to train the model.
 
 | Field          | Type       | Description
@@ -486,7 +490,7 @@ You can list all the inputs that were used to train the model.
 | id             | String     | The model's id
 
 ## ClarifaiV2.getModelTrainingInputsByVersion
-You can list all the inputs that were used to train the model.
+You can also list all the inputs that were used to train a specific model version.
 
 | Field          | Type       | Description
 |----------------|------------|----------
@@ -517,12 +521,3 @@ Deletes all models
 | Field          | Type       | Description
 |----------------|------------|----------
 | accessToken    | credentials| This is used to authorize your access to the API.
-
-## ClarifaiV2.searchModel
-Search for models by name or type
-
-| Field          | Type       | Description
-|----------------|------------|----------
-| accessToken    | credentials| This is used to authorize your access to the API.
-| name           | String     | The model name
-| type           | String     | This can be `concept`, `color`, `embed`, `facedetect`, `cluster` or `blur`

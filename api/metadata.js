@@ -67,14 +67,14 @@ res.status(200).send({
         },
         {
           "name": "page",
-          "info": "The page number (optional, default: 1)",
-          "type": "number",
+          "info": "The page Number (optional, default: 1)",
+          "type": "Number",
           "required": false
         },
         {
           "name": "perPage",
           "info": "Number of images to return per page (optional, default: 20)",
-          "type": "number",
+          "type": "Number",
           "required": false
         }
       ],
@@ -158,8 +158,8 @@ res.status(200).send({
         {
           "name": "name",
           "info": "The name of the concept to search for",
-          "type": "string",
-          "required": false
+          "type": "String",
+          "required": true
         }
       ],
       "callbacks": [
@@ -185,7 +185,7 @@ res.status(200).send({
         },
         {
           "name": "page",
-          "info": "The page number (optional, default: 1)",
+          "info": "The page Number (optional, default: 1)",
           "type": "Number",
           "required": false
         },
@@ -237,7 +237,7 @@ res.status(200).send({
     },
     {
       "name": "getInputsStatus",
-      "description": "Get inputs status (number of uploaded, in process or failed inputs)",
+      "description": "Get inputs status (Number of uploaded, in process or failed inputs)",
       "args": [
         {
           "name": "accessToken",
@@ -297,7 +297,7 @@ res.status(200).send({
         },
         {
           "name": "ids",
-          "info": "JSON Array of strings. The id of input to delete",
+          "info": "JSON Array of Strings. The id of input to delete",
           "type": "JSON",
           "required": true
         }
@@ -326,7 +326,7 @@ res.status(200).send({
         {
           "name": "id",
           "info": "The id of input to delete",
-          "type": "string",
+          "type": "String",
           "required": true
         }
       ],
@@ -493,7 +493,7 @@ res.status(200).send({
         },
         {
           "name": "concepts",
-          "info": "An array of concept objects or string. See README for more info.",
+          "info": "An array of concept objects or String. See README for more info.",
           "type": "JSON",
           "required": true
         }
@@ -556,7 +556,7 @@ res.status(200).send({
         {
           "name": "id",
           "info": "Model's id",
-          "type": "string",
+          "type": "String",
           "required": false
         },
         {
@@ -590,7 +590,7 @@ res.status(200).send({
         {
           "name": "id",
           "info": "Model's id",
-          "type": "string",
+          "type": "String",
           "required": true
         }
       ],
@@ -617,7 +617,7 @@ res.status(200).send({
         },
         {
           "name": "page",
-          "info": "The page number (optional, default: 1)",
+          "info": "The page Number (optional, default: 1)",
           "type": "Number",
           "required": false
         },
@@ -652,31 +652,31 @@ res.status(200).send({
         {
           "name": "modelId",
           "info": "Model id",
-          "type": "string",
+          "type": "String",
           "required": true
         },
         {
           "name": "modelName",
           "info": "Model name",
-          "type": "string",
+          "type": "String",
           "required": false
         },
         {
           "name": "conceptsData",
-          "info": "List of objects with ids, concept id strings or an instance of Concepts object. See README for more info.",
+          "info": "List of objects with ids, concept id Strings or an instance of Concepts object. See README for more info.",
           "type": "JSON",
           "required": false
         },
         {
           "name": "conceptsMutuallyExclusive",
           "info": "Do you expect to see more than one of the concepts in this model in the SAME image? Set to false (default) if so. Otherwise, set to true.",
-          "type": "boolean",
+          "type": "Boolean",
           "required": false
         },
         {
           "name": "closedEnvironment",
           "info": "Do you expect to run the trained model on images that do not contain ANY of the concepts in the model? Set to false (default) if so. Otherwise, set to true.",
-          "type": "boolean",
+          "type": "Boolean",
           "required": false
         }
       ],
@@ -704,25 +704,25 @@ res.status(200).send({
         {
           "name": "modelId",
           "info": "Model id",
-          "type": "string",
+          "type": "String",
           "required": true
         },
         {
           "name": "modelName",
           "info": "Model name",
-          "type": "string",
+          "type": "String",
           "required": false
         },
         {
           "name": "conceptsMutuallyExclusive",
           "info": "Do you expect to see more than one of the concepts in this model in the SAME image? Set to false (default) if so. Otherwise, set to true.",
-          "type": "boolean",
+          "type": "Boolean",
           "required": false
         },
         {
           "name": "closedEnvironment",
           "info": "Do you expect to run the trained model on images that do not contain ANY of the concepts in the model? Set to false (default) if so. Otherwise, set to true.",
-          "type": "boolean",
+          "type": "Boolean",
           "required": false
         }
       ],
@@ -856,7 +856,7 @@ res.status(200).send({
       ]
     },
     {
-      "name": "getModelTrainingInputsByVersion",
+      "name": "getModelTrainingInputs",
       "description": "You can list all the inputs that were used to train the model.",
       "args": [
         {
@@ -885,7 +885,7 @@ res.status(200).send({
     },
     {
       "name": "getModelTrainingInputsByVersion",
-      "description": "You can list all the inputs that were used to train the model.",
+      "description": "You can also list all the inputs that were used to train a specific model version.",
       "args": [
         {
           "name": "accessToken",
@@ -1000,7 +1000,7 @@ res.status(200).send({
           "info": "Error"
         }
       ]
-    },
+    }/*,
     {
       "name": "searchModel",
       "description": "Search for models by name or type",
@@ -1034,7 +1034,7 @@ res.status(200).send({
           "info": "Error"
         }
       ]
-    }
+    }*/
   ]
 })
 };

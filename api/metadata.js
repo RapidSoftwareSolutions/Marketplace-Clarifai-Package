@@ -286,6 +286,82 @@ res.status(200).send({
       ]
     },
     {
+      "name": "createInput",
+      "description": "Creates a single input.",
+      "args": [
+        {
+          "name": "accessToken",
+          "info": "This is used to authorize your access to the API.",
+          "type": "credentials",
+          "required": true
+        },
+        {
+          "name": "image",
+          "info": "Image file",
+          "type": "File",
+          "required": true
+        },
+        {
+          "name": "id",
+          "info": "ID of input",
+          "type": "String",
+          "required": false
+        },
+        {
+          "name": "conceptId",
+          "info": "The concept id",
+          "type": "String",
+          "required": false
+        },
+        {
+          "name": "conceptValue",
+          "info": "Whether or not the input is a positive (true) or negative (false) example of the concept (default: true)",
+          "type": "String",
+          "required": false
+        },
+        {
+          "name": "metadata",
+          "info": "Object with key values to attach to the input",
+          "type": "JSON",
+          "required": false
+        },
+        {
+          "name": "cropLeft",
+          "info": "Percent to be cropped from left. Example: `0.3`",
+          "type": "String",
+          "required": false
+        },
+        {
+          "name": "cropRight",
+          "info": "Percent to be cropped from right. Example: `0.6`",
+          "type": "String",
+          "required": false
+        },
+        {
+          "name": "cropTop",
+          "info": "Percent to be cropped from top. Example: `0.2`",
+          "type": "String",
+          "required": false
+        },
+        {
+          "name": "cropBottom",
+          "info": "Percent to be cropped from bottom. Example: `0.1`",
+          "type": "String",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "success",
+          "info": "Success"
+        },
+        {
+          "name": "error",
+          "info": "Error"
+        }
+      ]
+    },
+    {
       "name": "deleteInputs",
       "description": "Deletes list of inputs.",
       "args": [

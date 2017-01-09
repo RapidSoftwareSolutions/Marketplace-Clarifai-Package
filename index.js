@@ -8,7 +8,7 @@ global.RapidError = function(code, fields) {
         'EXPIRED':                'Please, update access token.',
         'REQUIRED_FIELDS':        'Please, check and fill in required fields.',
         'JSON_VALIDATION':        'Syntax error. Incorrect input JSON. Please, check fields with JSON input.',
-        'INTERNAL_PACKAGE_ERROR': 'Something went wrong inside the package.'
+        'INTERNAL_PACKAGE_ERROR': 'Something went wrong inside the package. Please, call support.'
     }
 
     this.status_code = code;
@@ -37,8 +37,7 @@ app.all(`/api/${PACKAGE_NAME}`, require('./api/metadata.js').do);
 for(let route in API) {
     app.post(`/api/${PACKAGE_NAME}/${route}`, _(function* (req, res) {
         let response;
-        let request;
-        let r  = {
+        let r = {
             callback     : "",
             contextWrites: {}
         };

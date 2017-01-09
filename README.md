@@ -147,6 +147,29 @@ With custom metadata:
   }
 }]
 ```
+## ClarifaiV2.createInput
+Creates a single input.
+
+| Field                                   | Type            | Description
+|-----------------------------------------|-----------------|----------
+| accessToken                             | credentials     | This is used to authorize your access to the API.
+| image                                   | File            | Image file
+| id                                      | String          | ID of input
+| conceptId                               | String          | The concept id
+| conceptValue                            | Boolean         | Whether or not the input is a positive (true) or negative (false) example of the concept (default: true)
+| metadata                                | JSON            | Object with key values to attach to the input
+| cropLeft                                | Float           | Percent to be cropped from **left**. Example: `0.3`
+| cropRight                               | Float           | Percent to be cropped from **right**. Example: `0.6`
+| cropTop                                 | Float           | Percent to be cropped from **top**. Example: `0.6`
+| cropBottom                              | Float           | Percent to be cropped from **bottom**. Example: `0.1`
+
+#### `inputs` field example:
+```json
+"metadata": {
+  "key": "value",
+  "list": [1, 2, 3]
+}
+```
 
 ## ClarifaiV2.deleteInputs
 Deletes list of inputs.

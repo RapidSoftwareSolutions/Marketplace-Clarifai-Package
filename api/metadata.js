@@ -23,7 +23,7 @@ res.status(200).send({
   "accounts": {
     "domain": "clarifai.com",
     "credentials": [
-      "accessToken"
+      "clientId", "clientSecret"
     ]
   },
   "blocks": [
@@ -62,7 +62,7 @@ res.status(200).send({
         {
           "name": "accessToken",
           "info": "This is used to authorize your access to the API.",
-          "type": "credentials",
+          "type": "String",
           "required": true
         },
         {
@@ -96,7 +96,7 @@ res.status(200).send({
         {
           "name": "accessToken",
           "info": "This is used to authorize your access to the API.",
-          "type": "credentials",
+          "type": "String",
           "required": true
         },
         {
@@ -124,7 +124,7 @@ res.status(200).send({
         {
           "name": "accessToken",
           "info": "This is used to authorize your access to the API.",
-          "type": "credentials",
+          "type": "String",
           "required": true
         },
         {
@@ -152,7 +152,7 @@ res.status(200).send({
         {
           "name": "accessToken",
           "info": "This is used to authorize your access to the API.",
-          "type": "credentials",
+          "type": "String",
           "required": true
         },
         {
@@ -180,7 +180,7 @@ res.status(200).send({
         {
           "name": "accessToken",
           "info": "This is used to authorize your access to the API.",
-          "type": "credentials",
+          "type": "String",
           "required": true
         },
         {
@@ -214,7 +214,7 @@ res.status(200).send({
         {
           "name": "accessToken",
           "info": "This is used to authorize your access to the API.",
-          "type": "credentials",
+          "type": "String",
           "required": true
         },
         {
@@ -242,7 +242,7 @@ res.status(200).send({
         {
           "name": "accessToken",
           "info": "This is used to authorize your access to the API.",
-          "type": "credentials",
+          "type": "String",
           "required": true
         }
       ],
@@ -264,7 +264,7 @@ res.status(200).send({
         {
           "name": "accessToken",
           "info": "This is used to authorize your access to the API.",
-          "type": "credentials",
+          "type": "String",
           "required": true
         },
         {
@@ -292,7 +292,7 @@ res.status(200).send({
         {
           "name": "accessToken",
           "info": "This is used to authorize your access to the API.",
-          "type": "credentials",
+          "type": "String",
           "required": true
         },
         {
@@ -368,7 +368,7 @@ res.status(200).send({
         {
           "name": "accessToken",
           "info": "This is used to authorize your access to the API.",
-          "type": "credentials",
+          "type": "String",
           "required": true
         },
         {
@@ -396,7 +396,7 @@ res.status(200).send({
         {
           "name": "accessToken",
           "info": "This is used to authorize your access to the API.",
-          "type": "credentials",
+          "type": "String",
           "required": true
         },
         {
@@ -424,7 +424,7 @@ res.status(200).send({
         {
           "name": "accessToken",
           "info": "This is used to authorize your access to the API.",
-          "type": "credentials",
+          "type": "String",
           "required": true
         }
       ],
@@ -446,7 +446,7 @@ res.status(200).send({
         {
           "name": "accessToken",
           "info": "This is used to authorize your access to the API.",
-          "type": "credentials",
+          "type": "String",
           "required": true
         },
         {
@@ -474,7 +474,7 @@ res.status(200).send({
         {
           "name": "accessToken",
           "info": "This is used to authorize your access to the API.",
-          "type": "credentials",
+          "type": "String",
           "required": true
         },
         {
@@ -502,7 +502,7 @@ res.status(200).send({
         {
           "name": "accessToken",
           "info": "This is used to authorize your access to the API.",
-          "type": "credentials",
+          "type": "String",
           "required": true
         },
         {
@@ -530,7 +530,7 @@ res.status(200).send({
         {
           "name": "accessToken",
           "info": "This is used to authorize your access to the API.",
-          "type": "credentials",
+          "type": "String",
           "required": true
         },
         {
@@ -558,7 +558,7 @@ res.status(200).send({
         {
           "name": "accessToken",
           "info": "This is used to authorize your access to the API.",
-          "type": "credentials",
+          "type": "String",
           "required": true
         },
         {
@@ -592,7 +592,7 @@ res.status(200).send({
         {
           "name": "accessToken",
           "info": "This is used to authorize your access to the API.",
-          "type": "credentials",
+          "type": "String",
           "required": true
         },
         {
@@ -626,7 +626,7 @@ res.status(200).send({
         {
           "name": "accessToken",
           "info": "This is used to authorize your access to the API.",
-          "type": "credentials",
+          "type": "String",
           "required": true
         },
         {
@@ -660,7 +660,7 @@ res.status(200).send({
         {
           "name": "accessToken",
           "info": "This is used to authorize your access to the API.",
-          "type": "credentials",
+          "type": "String",
           "required": true
         },
         {
@@ -688,7 +688,7 @@ res.status(200).send({
         {
           "name": "accessToken",
           "info": "This is used to authorize your access to the API.",
-          "type": "credentials",
+          "type": "String",
           "required": true
         },
         {
@@ -722,7 +722,7 @@ res.status(200).send({
         {
           "name": "accessToken",
           "info": "This is used to authorize your access to the API.",
-          "type": "credentials",
+          "type": "String",
           "required": true
         },
         {
@@ -774,7 +774,7 @@ res.status(200).send({
         {
           "name": "accessToken",
           "info": "This is used to authorize your access to the API.",
-          "type": "credentials",
+          "type": "String",
           "required": true
         },
         {
@@ -820,7 +820,7 @@ res.status(200).send({
         {
           "name": "accessToken",
           "info": "This is used to authorize your access to the API.",
-          "type": "credentials",
+          "type": "String",
           "required": true
         },
         {
@@ -848,7 +848,7 @@ res.status(200).send({
         {
           "name": "accessToken",
           "info": "This is used to authorize your access to the API.",
-          "type": "credentials",
+          "type": "String",
           "required": true
         },
         {
@@ -876,7 +876,7 @@ res.status(200).send({
         {
           "name": "accessToken",
           "info": "This is used to authorize your access to the API.",
-          "type": "credentials",
+          "type": "String",
           "required": true
         },
         {
@@ -904,7 +904,7 @@ res.status(200).send({
         {
           "name": "accessToken",
           "info": "This is used to authorize your access to the API.",
-          "type": "credentials",
+          "type": "String",
           "required": true
         },
         {
@@ -938,7 +938,7 @@ res.status(200).send({
         {
           "name": "accessToken",
           "info": "This is used to authorize your access to the API.",
-          "type": "credentials",
+          "type": "String",
           "required": true
         },
         {
@@ -966,7 +966,7 @@ res.status(200).send({
         {
           "name": "accessToken",
           "info": "This is used to authorize your access to the API.",
-          "type": "credentials",
+          "type": "String",
           "required": true
         },
         {
@@ -1000,7 +1000,7 @@ res.status(200).send({
         {
           "name": "accessToken",
           "info": "This is used to authorize your access to the API.",
-          "type": "credentials",
+          "type": "String",
           "required": true
         },
         {
@@ -1034,7 +1034,7 @@ res.status(200).send({
         {
           "name": "accessToken",
           "info": "This is used to authorize your access to the API.",
-          "type": "credentials",
+          "type": "String",
           "required": true
         },
         {
@@ -1062,7 +1062,7 @@ res.status(200).send({
         {
           "name": "accessToken",
           "info": "This is used to authorize your access to the API.",
-          "type": "credentials",
+          "type": "String",
           "required": true
         }
       ],
@@ -1084,7 +1084,7 @@ res.status(200).send({
         {
           "name": "accessToken",
           "info": "This is used to authorize your access to the API.",
-          "type": "credentials",
+          "type": "String",
           "required": true
         },
         {

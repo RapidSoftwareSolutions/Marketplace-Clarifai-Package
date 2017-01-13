@@ -61,7 +61,7 @@ res.status(200).send({
       "args": [
         {
           "name": "accessToken",
-          "info": "This is used to authorize your access to the API.",
+          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
           "type": "String",
           "required": true
         },
@@ -95,7 +95,7 @@ res.status(200).send({
       "args": [
         {
           "name": "accessToken",
-          "info": "This is used to authorize your access to the API.",
+          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
           "type": "String",
           "required": true
         },
@@ -123,7 +123,7 @@ res.status(200).send({
       "args": [
         {
           "name": "accessToken",
-          "info": "This is used to authorize your access to the API.",
+          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
           "type": "String",
           "required": true
         },
@@ -151,7 +151,7 @@ res.status(200).send({
       "args": [
         {
           "name": "accessToken",
-          "info": "This is used to authorize your access to the API.",
+          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
           "type": "String",
           "required": true
         },
@@ -179,7 +179,7 @@ res.status(200).send({
       "args": [
         {
           "name": "accessToken",
-          "info": "This is used to authorize your access to the API.",
+          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
           "type": "String",
           "required": true
         },
@@ -213,7 +213,7 @@ res.status(200).send({
       "args": [
         {
           "name": "accessToken",
-          "info": "This is used to authorize your access to the API.",
+          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
           "type": "String",
           "required": true
         },
@@ -241,7 +241,7 @@ res.status(200).send({
       "args": [
         {
           "name": "accessToken",
-          "info": "This is used to authorize your access to the API.",
+          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
           "type": "String",
           "required": true
         }
@@ -263,7 +263,7 @@ res.status(200).send({
       "args": [
         {
           "name": "accessToken",
-          "info": "This is used to authorize your access to the API.",
+          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
           "type": "String",
           "required": true
         },
@@ -291,7 +291,7 @@ res.status(200).send({
       "args": [
         {
           "name": "accessToken",
-          "info": "This is used to authorize your access to the API.",
+          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
           "type": "String",
           "required": true
         },
@@ -367,7 +367,7 @@ res.status(200).send({
       "args": [
         {
           "name": "accessToken",
-          "info": "This is used to authorize your access to the API.",
+          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
           "type": "String",
           "required": true
         },
@@ -395,7 +395,7 @@ res.status(200).send({
       "args": [
         {
           "name": "accessToken",
-          "info": "This is used to authorize your access to the API.",
+          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
           "type": "String",
           "required": true
         },
@@ -423,7 +423,7 @@ res.status(200).send({
       "args": [
         {
           "name": "accessToken",
-          "info": "This is used to authorize your access to the API.",
+          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
           "type": "String",
           "required": true
         }
@@ -445,7 +445,7 @@ res.status(200).send({
       "args": [
         {
           "name": "accessToken",
-          "info": "This is used to authorize your access to the API.",
+          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
           "type": "String",
           "required": true
         },
@@ -473,7 +473,7 @@ res.status(200).send({
       "args": [
         {
           "name": "accessToken",
-          "info": "This is used to authorize your access to the API.",
+          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
           "type": "String",
           "required": true
         },
@@ -501,7 +501,7 @@ res.status(200).send({
       "args": [
         {
           "name": "accessToken",
-          "info": "This is used to authorize your access to the API.",
+          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
           "type": "String",
           "required": true
         },
@@ -529,7 +529,7 @@ res.status(200).send({
       "args": [
         {
           "name": "accessToken",
-          "info": "This is used to authorize your access to the API.",
+          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
           "type": "String",
           "required": true
         },
@@ -557,7 +557,7 @@ res.status(200).send({
       "args": [
         {
           "name": "accessToken",
-          "info": "This is used to authorize your access to the API.",
+          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
           "type": "String",
           "required": true
         },
@@ -591,7 +591,7 @@ res.status(200).send({
       "args": [
         {
           "name": "accessToken",
-          "info": "This is used to authorize your access to the API.",
+          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
           "type": "String",
           "required": true
         },
@@ -625,7 +625,7 @@ res.status(200).send({
       "args": [
         {
           "name": "accessToken",
-          "info": "This is used to authorize your access to the API.",
+          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
           "type": "String",
           "required": true
         },
@@ -659,7 +659,7 @@ res.status(200).send({
       "args": [
         {
           "name": "accessToken",
-          "info": "This is used to authorize your access to the API.",
+          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
           "type": "String",
           "required": true
         },
@@ -687,7 +687,7 @@ res.status(200).send({
       "args": [
         {
           "name": "accessToken",
-          "info": "This is used to authorize your access to the API.",
+          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
           "type": "String",
           "required": true
         },
@@ -721,7 +721,7 @@ res.status(200).send({
       "args": [
         {
           "name": "accessToken",
-          "info": "This is used to authorize your access to the API.",
+          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
           "type": "String",
           "required": true
         },
@@ -773,7 +773,7 @@ res.status(200).send({
       "args": [
         {
           "name": "accessToken",
-          "info": "This is used to authorize your access to the API.",
+          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
           "type": "String",
           "required": true
         },
@@ -819,7 +819,7 @@ res.status(200).send({
       "args": [
         {
           "name": "accessToken",
-          "info": "This is used to authorize your access to the API.",
+          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
           "type": "String",
           "required": true
         },
@@ -847,7 +847,7 @@ res.status(200).send({
       "args": [
         {
           "name": "accessToken",
-          "info": "This is used to authorize your access to the API.",
+          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
           "type": "String",
           "required": true
         },
@@ -875,7 +875,7 @@ res.status(200).send({
       "args": [
         {
           "name": "accessToken",
-          "info": "This is used to authorize your access to the API.",
+          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
           "type": "String",
           "required": true
         },
@@ -903,7 +903,7 @@ res.status(200).send({
       "args": [
         {
           "name": "accessToken",
-          "info": "This is used to authorize your access to the API.",
+          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
           "type": "String",
           "required": true
         },
@@ -937,7 +937,7 @@ res.status(200).send({
       "args": [
         {
           "name": "accessToken",
-          "info": "This is used to authorize your access to the API.",
+          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
           "type": "String",
           "required": true
         },
@@ -965,7 +965,7 @@ res.status(200).send({
       "args": [
         {
           "name": "accessToken",
-          "info": "This is used to authorize your access to the API.",
+          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
           "type": "String",
           "required": true
         },
@@ -999,7 +999,7 @@ res.status(200).send({
       "args": [
         {
           "name": "accessToken",
-          "info": "This is used to authorize your access to the API.",
+          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
           "type": "String",
           "required": true
         },
@@ -1033,7 +1033,7 @@ res.status(200).send({
       "args": [
         {
           "name": "accessToken",
-          "info": "This is used to authorize your access to the API.",
+          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
           "type": "String",
           "required": true
         },
@@ -1061,7 +1061,7 @@ res.status(200).send({
       "args": [
         {
           "name": "accessToken",
-          "info": "This is used to authorize your access to the API.",
+          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
           "type": "String",
           "required": true
         }
@@ -1083,7 +1083,7 @@ res.status(200).send({
       "args": [
         {
           "name": "accessToken",
-          "info": "This is used to authorize your access to the API.",
+          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
           "type": "String",
           "required": true
         },

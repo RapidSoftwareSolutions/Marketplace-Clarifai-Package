@@ -41,13 +41,15 @@ module.exports = (req, res) => {
                     url: image,
                     //crop: [cropTop || 1, cropLeft || 1, cropBottom || 1, cropRight || 1]
                 },
-                concepts: [{
+                /*concepts: [{
                     id: conceptId,
                     value: conceptValue
-                }]
+                }]*/
             }
         }]
     }, true);
+
+    if(conceptId) data.inputs[0].data.concepts[0] = {id: conceptId, value: conceptValue};
 
     // clearargs is recursive
     if(metadata) data.inputs[0].data.metadata = metadata;

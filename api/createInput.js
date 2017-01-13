@@ -58,7 +58,12 @@ module.exports = (req, res) => {
     if(metadata) data.inputs[0].data.metadata = metadata;
 
     if(cropTop || cropLeft || cropBottom || cropRight)
-        data.inputs[0].data.image.crop = [cropTop || 0, cropLeft || 0, cropBottom || 0, cropRight || 0];
+        data.inputs[0].data.image.crop = [
+            parseFloat(cropTop)    || 0, 
+            parseFloat(cropLeft)   || 0, 
+            parseFloat(cropBottom) || 0, 
+            parseFloat(cropRight)  || 0
+        ];
     
     //console.log(JSON.stringify(data, undefined, 4))
 

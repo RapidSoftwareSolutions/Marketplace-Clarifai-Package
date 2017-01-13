@@ -23,7 +23,7 @@ List all the concepts
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | String| This is used to authorize your access to the API.
+| accessToken    | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
 | page           | number     | The page number (optional, default: 1)
 | perPage        | number     | Number of images to return per page (optional, default: 20)
 
@@ -32,7 +32,7 @@ List a single concept given an id
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | String| This is used to authorize your access to the API.
+| accessToken    | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
 | id             | String     | The concept's id
 
 ## ClarifaiV2.createConcept
@@ -40,7 +40,7 @@ Add a list of concepts given an id and name
 
 | Field                  | Type       | Description
 |------------------------|------------|----------
-| accessToken            | String| This is used to authorize your access to the API.
+| accessToken            | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
 | concepts               | JSON       | An array of media objects
 | concepts[].concept     | object     | If string, this is assumed to be the concept id. Otherwise, an object with the following attributes
 | concepts[].concept.id  | String     | The new concept's id (Required)
@@ -59,7 +59,7 @@ Search for a concept given a name. A wildcard can be given (example: The name "b
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | String| This is used to authorize your access to the API.
+| accessToken    | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
 | name           | string     | The name of the concept to search for
 
 ## ClarifaiV2.getAllInputs
@@ -67,7 +67,7 @@ Get all inputs in app
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | String| This is used to authorize your access to the API.
+| accessToken    | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
 | page           | Number     | The page number (optional, default: 1)
 | perPage        | Number     | Number of images to return per page (optional, default: 20)
 
@@ -76,7 +76,7 @@ Get input by id
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | String| This is used to authorize your access to the API.
+| accessToken    | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
 | id             | String     | The input id
 
 ## ClarifaiV2.getInputsStatus
@@ -84,14 +84,15 @@ Get inputs status (number of uploaded, in process or failed inputs)
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | String| This is used to authorize your access to the API.
+| accessToken    | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
+
 
 ## ClarifaiV2.createInputs
 Adds Inputs. You are limited to sending 128 inputs at a time.
 
 | Field                                   | Type            | Description
 |-----------------------------------------|-----------------|----------
-| accessToken                             | String     | This is used to authorize your access to the API.
+| accessToken                             | String     | This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
 | inputs                                  | JSON            | Can be a single media object or an array of media objects (max of 128 inputs/call; passing > 128 will throw an exception). 
 | inputs[].input                          | object          | If string, is given, this is assumed to be an image url
 | inputs[].input.data.image.base64        | string          | Can be a publicly accessibly url (base64 or url is required)
@@ -152,7 +153,7 @@ Creates a single input.
 
 | Field                                   | Type            | Description
 |-----------------------------------------|-----------------|----------
-| accessToken                             | String     | This is used to authorize your access to the API.
+| accessToken                             | String     | This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
 | image                                   | File            | Image file
 | id                                      | String          | ID of input
 | conceptId                               | String          | The concept id
@@ -176,7 +177,7 @@ Deletes list of inputs.
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | credentials| This is used to authorize your access to the API.
+| accessToken    | credentials| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
 | ids            | JSON       | JSON Array of strings. The id of input to delete
 
 #### `ids` field example:
@@ -189,7 +190,7 @@ Delete an input by id
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | credentials| This is used to authorize your access to the API.
+| accessToken    | credentials| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
 | id             | string     | The id of input to delete
 
 ## ClarifaiV2.deleteAllInputs
@@ -197,14 +198,15 @@ You can also delete multiple inputs in one API call. This will happen asynchrono
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | credentials| This is used to authorize your access to the API.
+| accessToken    | credentials| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
+
 
 ## ClarifaiV2.mergeInputsConcepts
 Merge concepts to inputs in bulk
 
 | Field                                        | Type       | Description
 |----------------------------------------------|------------|----------
-| accessToken                                  | String| This is used to authorize your access to the API.
+| accessToken                                  | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
 | inputs                                       | JSON       | List of concepts to update (max of 128 inputs/call; passing > 128 will throw an exception). 
 | inputs[].input                               | object     | 
 | inputs[].input.id                            | string     | The id of the input to update
@@ -253,7 +255,7 @@ Delete concepts to inputs in bulk
 
 | Field                                        | Type       | Description
 |----------------------------------------------|------------|----------
-| accessToken                                  | String| This is used to authorize your access to the API.
+| accessToken                                  | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
 | inputs                                       | JSON       | JSON Array of concepts to update (max of 128 inputs/call; passing > 128 will throw an exception). 
 | inputs[].input                               | object     | 
 | inputs[].input.id                            | string     | The id of the input to update
@@ -301,7 +303,7 @@ Overwrite inputs in bulk
 
 | Field                                   | Type       | Description
 |-----------------------------------------|------------|----------
-| accessToken                             | String| This is used to authorize your access to the API.
+| accessToken                             | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
 | inputs                                  | JSON       | List of concepts to update (max of 128 inputs/call; passing > 128 will throw an exception). 
 | inputs[].input                          | object     | 
 | inputs[].input.id                       | string     | The id of the input to update
@@ -350,7 +352,7 @@ Search for inputs or outputs based on concepts or images
 
 | Field                   | Type          | Description
 |-------------------------|---------------|----------
-| accessToken             | String   | This is used to authorize your access to the API.
+| accessToken             | String   | This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
 | queries                 | JSON          | List of all predictions to match with
 | queries[].concept       | object        | An object with the following keys:
 | queries[].concept.type  | string        | Search over 'input' or 'output' (default: 'output')
@@ -379,7 +381,7 @@ Merge concepts to a model
 
 | Field                | Type       | Description
 |----------------------|------------|----------
-| accessToken          | String| This is used to authorize your access to the API.
+| accessToken          | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
 | id                   | String     | The id of the model to apply changes to
 | concepts             | JSON       | An array of concept objects or string
 | concepts[].concept.id| String     | The id of the concept to attach to the model
@@ -396,7 +398,7 @@ Remove concepts from a model
 
 | Field                | Type       | Description
 |----------------------|------------|----------
-| accessToken          | String| This is used to authorize your access to the API.
+| accessToken          | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
 | id                   | String     | The id of the model to apply changes to
 | concepts             | JSON       | List of concept objects with id. 
 | concepts[].concept.id| String     | The id of the concept to delete.
@@ -413,7 +415,7 @@ Once you have trained a model you are ready to use your new model to get predict
 
 | Field                     | Type       | Description
 |---------------------------|------------|----------
-| accessToken               | String| This is used to authorize your access to the API.
+| accessToken               | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
 | id                        | string     | Model's id
 | inputs                    | JSON       | An array of Inputs Objects. 
 | inputs[].data.image       | object     | Object with keys explained below:
@@ -436,7 +438,7 @@ When you train a model, you are telling the system to look at all the images wit
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | String| This is used to authorize your access to the API.
+| accessToken    | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
 | id             | string     | Model's id
 
 ## ClarifaiV2.getAllModels
@@ -444,7 +446,7 @@ Returns all the models
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | String| This is used to authorize your access to the API.
+| accessToken    | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
 | page           | Number     | The page number (optional, default: 1)
 | perPage        | Number     | Number of images to return per page (optional, default: 20)
 
@@ -453,7 +455,7 @@ You can create your own model and train it with your own images and concepts. On
 
 | Field                    | Type       | Description
 |--------------------------|------------|----------
-| accessToken              | String| This is used to authorize your access to the API.
+| accessToken              | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
 | modelId                  | string     | Model id
 | modelName                | string     | Model name
 | conceptsData             | JSON       | List of objects with ids, concept id strings or an instance of Concepts object. 
@@ -465,7 +467,7 @@ Update a model
 
 | Field                    | Type       | Description
 |--------------------------|------------|----------
-| accessToken              | String| This is used to authorize your access to the API.
+| accessToken              | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
 | modelId                  | string     | Model id
 | modelName                | string     | Model name
 | conceptsMutuallyExclusive| boolean    | Do you expect to see more than one of the concepts in this model in the SAME image? Set to false (default) if so. Otherwise, set to true.
@@ -476,7 +478,7 @@ Returns a model specified by ID
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | String| This is used to authorize your access to the API.
+| accessToken    | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
 | id             | String     | The model's id
 
 ## ClarifaiV2.getModelOutputInfo
@@ -484,7 +486,7 @@ The output info of a model lists what concepts it contains.
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | String| This is used to authorize your access to the API.
+| accessToken    | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
 | id             | String     | The model's id
 
 ## ClarifaiV2.getAllModelVersions
@@ -492,7 +494,7 @@ The output info of a model lists what concepts it contains.
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | String| This is used to authorize your access to the API.
+| accessToken    | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
 | id             | String     | The model's id
 
 ## ClarifaiV2.getModelVersion
@@ -500,7 +502,7 @@ To get a specific model version, you must provide the modelId as well as the ver
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | String| This is used to authorize your access to the API.
+| accessToken    | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
 | modelId        | String     | The model's id
 | versionId      | String     | The model version's id
 
@@ -509,7 +511,7 @@ You can list all the inputs that were used to train the model.
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | String| This is used to authorize your access to the API.
+| accessToken    | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
 | id             | String     | The model's id
 
 ## ClarifaiV2.getModelTrainingInputsByVersion
@@ -517,7 +519,8 @@ You can also list all the inputs that were used to train a specific model versio
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | String| This is used to authorize your access to the API.
+| accessToken    | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
+
 | modelId        | String     | The model's id
 | versionId      | String     | The model version's id
 
@@ -526,7 +529,7 @@ If you would like to delete all models associated with an application, you can a
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | String| This is used to authorize your access to the API.
+| accessToken    | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
 | modelId        | String     | If of model to delete
 | versionId      | String     | The model's version id
 
@@ -535,7 +538,7 @@ Deletes model by id
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | String| This is used to authorize your access to the API.
+| accessToken    | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
 | id             | String     | Model's id
 
 ## ClarifaiV2.deleteAllModels
@@ -543,4 +546,5 @@ Deletes all models
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | String| This is used to authorize your access to the API.
+| accessToken    | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
+

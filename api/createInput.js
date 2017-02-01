@@ -65,8 +65,6 @@ module.exports = (req, res) => {
             parseFloat(cropRight)  || 0
         ];
     
-    //console.log(JSON.stringify(data, undefined, 4))
-
     request({
         uri: 'https://api.clarifai.com/v2/inputs',
         method: 'POST',

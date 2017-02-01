@@ -49,6 +49,7 @@ for(let route in API) {
             delete response['_config'];
             r.contextWrites['to'] = response.data ? response.data : response;
         } catch(e) {
+            console.log(e);
             r.callback            = 'error';
             r.contextWrites['to'] = e.status_code 
                 ? e 

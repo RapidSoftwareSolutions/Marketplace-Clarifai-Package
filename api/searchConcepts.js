@@ -18,7 +18,7 @@ module.exports = (req, res) => {
         throw new RapidError('REQUIRED_FIELDS', required);
     
     request({
-        uri: 'https://api.clarifai.com//v2/concepts/searches',
+        uri: 'https://api.clarifai.com/v2/concepts/searches',
         method: 'POST',
         headers: {
             'Authorization': 'Bearer ' + accessToken

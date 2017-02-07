@@ -1,5 +1,8 @@
-# ClarifaiV2 Package
-Build amazing apps with the world’s best image and video recognition API.
+[![](https://scdn.rapidapi.com/RapidAPI_banner.png)](https://rapidapi.com/package/Clarifai/functions?utm_source=RapidAPIGitHub_ClarifaiCustomFunctions&utm_medium=button&utm_content=RapidAPI_GitHub)
+
+# Clarifai Custom Models Package
+Build machine learning models for image/video recognition.
+
 * Domain: clarifai.com
 * Credentials: accessToken
 

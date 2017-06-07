@@ -1,4 +1,5 @@
 generator
+.idea
 node_modules
 test/rapid.*
 test/*.json

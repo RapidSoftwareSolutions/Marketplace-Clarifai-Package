@@ -13,6 +13,15 @@ Build machine learning models for image/video recognition.
 3. Copy and save your `client_id and` and `client_secret`
 4. Press **Generate Access Token** button or use [getAccessToken](#getAccessToken) method.
 
+## Custom datatypes:
+ |Datatype|Description|Example
+ |--------|-----------|----------
+ |Datepicker|String which includes date and time|```2016-05-28 00:00:00```
+ |Map|String which includes latitude and longitude coma separated|```50.37, 26.56```
+ |List|Simple array|```["123", "sample"]```
+ |Select|String with predefined values|```sample```
+ |Array|Array of objects|```[{"Second name":"123","Age":"12","Photo":"sdf","Draft":"sdfsdf"},{"name":"adi","Second name":"bla","Age":"4","Photo":"asfserwe","Draft":"sdfsdf"}] ```
+
 ## ClarifaiV2.getAccessToken
 Gets a token from the API using client credentials
 
@@ -44,7 +53,7 @@ Add a list of concepts given an id and name
 | Field                  | Type       | Description
 |------------------------|------------|----------
 | accessToken            | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
-| concepts               | JSON       | An array of media objects
+| concepts               | Array       | An array of media objects
 | concepts[].concept     | object     | If string, this is assumed to be the concept id. Otherwise, an object with the following attributes
 | concepts[].concept.id  | String     | The new concept's id (Required)
 | concepts[].concept.name| String     | The new concept's name
@@ -181,7 +190,7 @@ Deletes list of inputs.
 | Field          | Type       | Description
 |----------------|------------|----------
 | accessToken    | credentials| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
-| ids            | JSON       | JSON Array of strings. The id of input to delete
+| ids            | List       | JSON Array of strings. The id of input to delete
 
 #### `ids` field example:
 ```json

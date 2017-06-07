@@ -130,8 +130,22 @@ res.status(200).send({
         {
           "name": "concepts",
           "info": "An array of media objects. See README for more info.",
-          "type": "JSON",
-          "required": true
+          "type": "Array",
+          "required": true,
+          "structure": [
+              {
+                  "name": "id",
+                  "info": "The new concept's id",
+                  "type": "String",
+                  "required": true
+              },
+              {
+                  "name": "name",
+                  "info": "The new concept's name",
+                  "type": "String",
+                  "required": true
+              }
+          ]
         }
       ],
       "callbacks": [
@@ -373,9 +387,14 @@ res.status(200).send({
         },
         {
           "name": "ids",
-          "info": "JSON Array of Strings. The id of input to delete",
-          "type": "JSON",
-          "required": true
+          "info": "List of Strings. The id of input to delete",
+          "type": "List",
+          "required": true,
+          "structure": {
+              "name": "id",
+              "info": "The id of input to delete",
+              "type": "String"
+          }
         }
       ],
       "callbacks": [

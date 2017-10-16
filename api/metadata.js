@@ -31,7 +31,7 @@ res.status(200).send({
     "Go to Developer Dashboard (https://developer.clarifai.com/account/applications/)",
     "Press Create a New Application button",
     "Copy and save your client_id and and client_secret",
-    "Press Generate Access Token button or use getAccessToken method (https://github.com/RapidSoftwareSolutions/Marketplace-Clarifai-Package#getAccessToken)"
+    "Press Generate Access Token button or use getAccessToken method (https://rapidapi.com/package/Clarifai/functions/getAccessToken)"
   ],
   "blocks": [
     {

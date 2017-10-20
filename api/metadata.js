@@ -23,53 +23,24 @@ res.status(200).send({
   "accounts": {
     "domain": "clarifai.com",
     "credentials": [
-      "clientId", "clientSecret"
+      "apiKey"
     ]
   },
   "steps": [
     "Signup in clarifai.com",
     "Go to Developer Dashboard (https://developer.clarifai.com/account/applications/)",
     "Press Create a New Application button",
-    "Copy and save your client_id and and client_secret",
-    "Press Generate Access Token button or use getAccessToken method (https://rapidapi.com/package/Clarifai/functions/getAccessToken)"
+    "Copy and save your API KEY"
   ],
   "blocks": [
-    {
-      "name": "getAccessToken",
-      "description": "Gets a token from the API using client credentials",
-      "args": [
-        {
-          "name": "clientId",
-          "info": "This identifies which application is trying to access the API. This is unique and generated once for each application in your account.",
-          "type": "credentials",
-          "required": true
-        },
-        {
-          "name": "clientSecret",
-          "info": "This provides security when authorizing with the API. This is unique and generated once for each application in your account.",
-          "type": "credentials",
-          "required": true
-        }
-      ],
-      "callbacks": [
-        {
-          "name": "success",
-          "info": "Success"
-        },
-        {
-          "name": "error",
-          "info": "Error"
-        }
-      ]
-    },
     {
       "name": "getAllConcepts",
       "description": "List all the concepts",
       "args": [
         {
-          "name": "accessToken",
-          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
-          "type": "String",
+          "name": "apiKey",
+          "info": "Your Clarifai API key",
+          "type": "credentials",
           "required": true
         },
         {
@@ -101,9 +72,9 @@ res.status(200).send({
       "description": "List a single concept given an id",
       "args": [
         {
-          "name": "accessToken",
-          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
-          "type": "String",
+          "name": "apiKey",
+          "info": "Your Clarifai API key",
+          "type": "credentials",
           "required": true
         },
         {
@@ -129,9 +100,9 @@ res.status(200).send({
       "description": "Add a list of concepts given an id and name",
       "args": [
         {
-          "name": "accessToken",
-          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
-          "type": "String",
+          "name": "apiKey",
+          "info": "Your Clarifai API key",
+          "type": "credentials",
           "required": true
         },
         {
@@ -171,9 +142,9 @@ res.status(200).send({
       "description": "Search for a concept given a name. A wildcard can be given (example: The name \"bo*\" will match with \"boat\" and \"bow\" given those concepts exist",
       "args": [
         {
-          "name": "accessToken",
-          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
-          "type": "String",
+          "name": "apiKey",
+          "info": "Your Clarifai API key",
+          "type": "credentials",
           "required": true
         },
         {
@@ -199,9 +170,9 @@ res.status(200).send({
       "description": "Get all inputs in app",
       "args": [
         {
-          "name": "accessToken",
-          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
-          "type": "String",
+          "name": "apiKey",
+          "info": "Your Clarifai API key",
+          "type": "credentials",
           "required": true
         },
         {
@@ -233,9 +204,9 @@ res.status(200).send({
       "description": "Get input by id",
       "args": [
         {
-          "name": "accessToken",
-          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
-          "type": "String",
+          "name": "apiKey",
+          "info": "Your Clarifai API key",
+          "type": "credentials",
           "required": true
         },
         {
@@ -261,9 +232,9 @@ res.status(200).send({
       "description": "Get inputs status (Number of uploaded, in process or failed inputs)",
       "args": [
         {
-          "name": "accessToken",
-          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
-          "type": "String",
+          "name": "apiKey",
+          "info": "Your Clarifai API key",
+          "type": "credentials",
           "required": true
         }
       ],
@@ -283,9 +254,9 @@ res.status(200).send({
       "description": "Adds Inputs. You are limited to sending 128 inputs at a time.",
       "args": [
         {
-          "name": "accessToken",
-          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
-          "type": "String",
+          "name": "apiKey",
+          "info": "Your Clarifai API key",
+          "type": "credentials",
           "required": true
         },
         {
@@ -311,9 +282,9 @@ res.status(200).send({
       "description": "Creates a single input.",
       "args": [
         {
-          "name": "accessToken",
-          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
-          "type": "String",
+          "name": "apiKey",
+          "info": "Your Clarifai API key",
+          "type": "credentials",
           "required": true
         },
         {
@@ -387,9 +358,9 @@ res.status(200).send({
       "description": "Deletes list of inputs.",
       "args": [
         {
-          "name": "accessToken",
-          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
-          "type": "String",
+          "name": "apiKey",
+          "info": "Your Clarifai API key",
+          "type": "credentials",
           "required": true
         },
         {
@@ -420,9 +391,9 @@ res.status(200).send({
       "description": "Delete an input by id",
       "args": [
         {
-          "name": "accessToken",
-          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
-          "type": "String",
+          "name": "apiKey",
+          "info": "Your Clarifai API key",
+          "type": "credentials",
           "required": true
         },
         {
@@ -448,9 +419,9 @@ res.status(200).send({
       "description": "You can also delete multiple inputs in one API call. This will happen asynchronously.",
       "args": [
         {
-          "name": "accessToken",
-          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
-          "type": "String",
+          "name": "apiKey",
+          "info": "Your Clarifai API key",
+          "type": "credentials",
           "required": true
         }
       ],
@@ -470,9 +441,9 @@ res.status(200).send({
       "description": "Merge concepts to inputs in bulk",
       "args": [
         {
-          "name": "accessToken",
-          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
-          "type": "String",
+          "name": "apiKey",
+          "info": "Your Clarifai API key",
+          "type": "credentials",
           "required": true
         },
         {
@@ -498,9 +469,9 @@ res.status(200).send({
       "description": "Delete concepts to inputs in bulk",
       "args": [
         {
-          "name": "accessToken",
-          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
-          "type": "String",
+          "name": "apiKey",
+          "info": "Your Clarifai API key",
+          "type": "credentials",
           "required": true
         },
         {
@@ -526,9 +497,9 @@ res.status(200).send({
       "description": "Overwrite inputs in bulk",
       "args": [
         {
-          "name": "accessToken",
-          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
-          "type": "String",
+          "name": "apiKey",
+          "info": "Your Clarifai API key",
+          "type": "credentials",
           "required": true
         },
         {
@@ -554,9 +525,9 @@ res.status(200).send({
       "description": "Search for inputs or outputs based on concepts or images",
       "args": [
         {
-          "name": "accessToken",
-          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
-          "type": "String",
+          "name": "apiKey",
+          "info": "Your Clarifai API key",
+          "type": "credentials",
           "required": true
         },
         {
@@ -582,9 +553,9 @@ res.status(200).send({
       "description": "Merge concepts to a model",
       "args": [
         {
-          "name": "accessToken",
-          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
-          "type": "String",
+          "name": "apiKey",
+          "info": "Your Clarifai API key",
+          "type": "credentials",
           "required": true
         },
         {
@@ -616,9 +587,9 @@ res.status(200).send({
       "description": "Remove concepts from a model",
       "args": [
         {
-          "name": "accessToken",
-          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
-          "type": "String",
+          "name": "apiKey",
+          "info": "Your Clarifai API key",
+          "type": "credentials",
           "required": true
         },
         {
@@ -650,9 +621,9 @@ res.status(200).send({
       "description": "Once you have trained a model you are ready to use your new model to get predictions. The predictions returned will only contain the concepts that you told it to see.",
       "args": [
         {
-          "name": "accessToken",
-          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
-          "type": "String",
+          "name": "apiKey",
+          "info": "Your Clarifai API key",
+          "type": "credentials",
           "required": true
         },
         {
@@ -684,9 +655,9 @@ res.status(200).send({
       "description": "When you train a model, you are telling the system to look at all the images with concepts you've provided and learn from them. This train operation is asynchronous. It may take a few seconds for your model to be fully trained and ready.",
       "args": [
         {
-          "name": "accessToken",
-          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
-          "type": "String",
+          "name": "apiKey",
+          "info": "Your Clarifai API key",
+          "type": "credentials",
           "required": true
         },
         {
@@ -712,9 +683,9 @@ res.status(200).send({
       "description": "Returns all the models",
       "args": [
         {
-          "name": "accessToken",
-          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
-          "type": "String",
+          "name": "apiKey",
+          "info": "Your Clarifai API key",
+          "type": "credentials",
           "required": true
         },
         {
@@ -746,9 +717,9 @@ res.status(200).send({
       "description": "You can create your own model and train it with your own images and concepts. Once you train it to see how you would like it to see, you can then use that model to make predictions.",
       "args": [
         {
-          "name": "accessToken",
-          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
-          "type": "String",
+          "name": "apiKey",
+          "info": "Your Clarifai API key",
+          "type": "credentials",
           "required": true
         },
         {
@@ -798,9 +769,9 @@ res.status(200).send({
       "description": "Update a model",
       "args": [
         {
-          "name": "accessToken",
-          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
-          "type": "String",
+          "name": "apiKey",
+          "info": "Your Clarifai API key",
+          "type": "credentials",
           "required": true
         },
         {
@@ -844,9 +815,9 @@ res.status(200).send({
       "description": "Returns a model specified by ID",
       "args": [
         {
-          "name": "accessToken",
-          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
-          "type": "String",
+          "name": "apiKey",
+          "info": "Your Clarifai API key",
+          "type": "credentials",
           "required": true
         },
         {
@@ -872,9 +843,9 @@ res.status(200).send({
       "description": "The output info of a model lists what concepts it contains.",
       "args": [
         {
-          "name": "accessToken",
-          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
-          "type": "String",
+          "name": "apiKey",
+          "info": "Your Clarifai API key",
+          "type": "credentials",
           "required": true
         },
         {
@@ -900,9 +871,9 @@ res.status(200).send({
       "description": "The output info of a model lists what concepts it contains.",
       "args": [
         {
-          "name": "accessToken",
-          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
-          "type": "String",
+          "name": "apiKey",
+          "info": "Your Clarifai API key",
+          "type": "credentials",
           "required": true
         },
         {
@@ -928,9 +899,9 @@ res.status(200).send({
       "description": "To get a specific model version, you must provide the modelId as well as the versionId. You can inspect the model version status to determine if your model is trained or still training.",
       "args": [
         {
-          "name": "accessToken",
-          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
-          "type": "String",
+          "name": "apiKey",
+          "info": "Your Clarifai API key",
+          "type": "credentials",
           "required": true
         },
         {
@@ -962,9 +933,9 @@ res.status(200).send({
       "description": "You can list all the inputs that were used to train the model.",
       "args": [
         {
-          "name": "accessToken",
-          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
-          "type": "String",
+          "name": "apiKey",
+          "info": "Your Clarifai API key",
+          "type": "credentials",
           "required": true
         },
         {
@@ -990,9 +961,9 @@ res.status(200).send({
       "description": "You can also list all the inputs that were used to train a specific model version.",
       "args": [
         {
-          "name": "accessToken",
-          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
-          "type": "String",
+          "name": "apiKey",
+          "info": "Your Clarifai API key",
+          "type": "credentials",
           "required": true
         },
         {
@@ -1024,9 +995,9 @@ res.status(200).send({
       "description": "If you would like to delete all models associated with an application, you can also do that. Please proceed with caution as these cannot be recovered.",
       "args": [
         {
-          "name": "accessToken",
-          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
-          "type": "String",
+          "name": "apiKey",
+          "info": "Your Clarifai API key",
+          "type": "credentials",
           "required": true
         },
         {
@@ -1058,9 +1029,9 @@ res.status(200).send({
       "description": "Deletes model by id",
       "args": [
         {
-          "name": "accessToken",
-          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
-          "type": "String",
+          "name": "apiKey",
+          "info": "Your Clarifai API key",
+          "type": "credentials",
           "required": true
         },
         {
@@ -1086,9 +1057,9 @@ res.status(200).send({
       "description": "Deletes all models",
       "args": [
         {
-          "name": "accessToken",
-          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
-          "type": "String",
+          "name": "apiKey",
+          "info": "Your Clarifai API key",
+          "type": "credentials",
           "required": true
         }
       ],
@@ -1108,9 +1079,9 @@ res.status(200).send({
       "description": "Search for models by name or type",
       "args": [
         {
-          "name": "accessToken",
-          "info": "This is used to authorize your access to the API. To obtain key run `getAccessToken` method.",
-          "type": "String",
+          "name": "apiKey",
+          "info": "Your Clarifai API key",
+          "type": "credentials",
           "required": true
         },
         {

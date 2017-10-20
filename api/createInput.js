@@ -8,7 +8,7 @@ module.exports = (req, res) => {
     req.body.args = lib.clearArgs(req.body.args);
 
     let { 
-        accessToken,
+        apiKey,
         image,
         metadata,
         id,
@@ -20,7 +20,7 @@ module.exports = (req, res) => {
         cropBottom
     } = req.body.args;
         
-    let required = lib.parseReq({accessToken, image});
+    let required = lib.parseReq({apiKey, image});
 
     if(required.length > 0) 
         throw new RapidError('REQUIRED_FIELDS', required);
@@ -69,7 +69,7 @@ module.exports = (req, res) => {
         uri: 'https://api.clarifai.com/v2/inputs',
         method: 'POST',
         headers: {
-            'Authorization': 'Bearer ' + accessToken
+            'Authorization': 'Key ' + apiKey
         },
         json: data
     }, (err, response, reslut) => {

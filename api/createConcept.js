@@ -8,11 +8,11 @@ module.exports = (req, res) => {
     req.body.args = lib.clearArgs(req.body.args);
 
     let { 
-        accessToken,
+        apiKey,
         concepts
     } = req.body.args;
         
-    let required = lib.parseReq({accessToken, concepts});
+    let required = lib.parseReq({apiKey, concepts});
 
     if(required.length > 0) 
         throw new RapidError('REQUIRED_FIELDS', required);
@@ -33,7 +33,7 @@ module.exports = (req, res) => {
         uri: 'https://api.clarifai.com/v2/concepts',
         method: 'POST',
         headers: {
-            'Authorization': 'Bearer ' + accessToken
+            'Authorization': 'Key ' + apiKey
         },
         json: body
     }, (err, response, reslut) => {

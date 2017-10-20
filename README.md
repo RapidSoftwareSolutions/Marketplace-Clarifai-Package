@@ -4,14 +4,19 @@
 Build machine learning models for image/video recognition.
 
 * Domain: clarifai.com
-* Credentials: accessToken
+* Credentials: apiKey
 
 ## How to get credentials: 
 0. Signup in [clarifai.com](https://clarifai.com)
 1. Go to [Developer Dashboard](https://developer.clarifai.com/account/applications/)
 2. Press **Create a New Application** button
-3. Copy and save your `client_id and` and `client_secret`
-4. Press **Generate Access Token** button or use [getAccessToken](#getAccessToken) method.
+3. Copy and save your `API KEY`
+
+```
+Note: API Keys have replaced Access Tokens/Client ID & Secret
+
+API Keys will now be used to authorize your Clarifai applications. You can go to API Keys page to create a new key. This change will not break existing applications - Access Tokens will be supported until late 2017. You can find more information on our blog.
+```
 
 ## Custom datatypes:
  |Datatype|Description|Example
@@ -22,20 +27,13 @@ Build machine learning models for image/video recognition.
  |Select|String with predefined values|```sample```
  |Array|Array of objects|```[{"Second name":"123","Age":"12","Photo":"sdf","Draft":"sdfsdf"},{"name":"adi","Second name":"bla","Age":"4","Photo":"asfserwe","Draft":"sdfsdf"}] ```
 
-## ClarifaiV2.getAccessToken
-Gets a token from the API using client credentials
-
-| Field          | Type       | Description
-|----------------|------------|----------
-| clientId       | credentials| This identifies which application is trying to access the API. This is unique and generated once for each application in your account.
-| clientSecret   | credentials| This provides security when authorizing with the API. This is unique and generated once for each application in your account.
 
 ## ClarifaiV2.getAllConcepts
 List all the concepts
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
+| apiKey    | credentials| Your Clarifai API key
 | page           | number     | The page number (optional, default: 1)
 | perPage        | number     | Number of images to return per page (optional, default: 20)
 
@@ -44,7 +42,7 @@ List a single concept given an id
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
+| apiKey    | credentials| Your Clarifai API key
 | id             | String     | The concept's id
 
 ## ClarifaiV2.createConcept
@@ -52,7 +50,7 @@ Add a list of concepts given an id and name
 
 | Field                  | Type       | Description
 |------------------------|------------|----------
-| accessToken            | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
+| apiKey            | credentials| Your Clarifai API key
 | concepts               | Array       | An array of media objects
 | concepts[].concept     | object     | If string, this is assumed to be the concept id. Otherwise, an object with the following attributes
 | concepts[].concept.id  | String     | The new concept's id (Required)
@@ -71,7 +69,7 @@ Search for a concept given a name. A wildcard can be given (example: The name "b
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
+| apiKey    | credentials| Your Clarifai API key
 | name           | string     | The name of the concept to search for
 
 ## ClarifaiV2.getAllInputs
@@ -79,7 +77,7 @@ Get all inputs in app
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
+| apiKey    | credentials| Your Clarifai API key
 | page           | Number     | The page number (optional, default: 1)
 | perPage        | Number     | Number of images to return per page (optional, default: 20)
 
@@ -88,7 +86,7 @@ Get input by id
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
+| apiKey    | credentials| Your Clarifai API key
 | id             | String     | The input id
 
 ## ClarifaiV2.getInputsStatus
@@ -96,7 +94,7 @@ Get inputs status (number of uploaded, in process or failed inputs)
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
+| apiKey    | credentials| Your Clarifai API key
 
 
 ## ClarifaiV2.createInputs
@@ -104,7 +102,7 @@ Adds Inputs. You are limited to sending 128 inputs at a time.
 
 | Field                                   | Type            | Description
 |-----------------------------------------|-----------------|----------
-| accessToken                             | String     | This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
+| apiKey                             | String     | This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
 | inputs                                  | JSON            | Can be a single media object or an array of media objects (max of 128 inputs/call; passing > 128 will throw an exception). 
 | inputs[].input                          | object          | If string, is given, this is assumed to be an image url
 | inputs[].input.data.image.base64        | string          | Can be a publicly accessibly url (base64 or url is required)
@@ -165,7 +163,7 @@ Creates a single input.
 
 | Field                                   | Type            | Description
 |-----------------------------------------|-----------------|----------
-| accessToken                             | String     | This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
+| apiKey                             | String     | This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
 | image                                   | File            | Image file
 | id                                      | String          | ID of input
 | conceptId                               | String          | The concept id
@@ -189,7 +187,7 @@ Deletes list of inputs.
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | credentials| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
+| apiKey    | credentials| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
 | ids            | List       | JSON Array of strings. The id of input to delete
 
 #### `ids` field example:
@@ -202,7 +200,7 @@ Delete an input by id
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | credentials| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
+| apiKey    | credentials| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
 | id             | string     | The id of input to delete
 
 ## ClarifaiV2.deleteAllInputs
@@ -210,7 +208,7 @@ You can also delete multiple inputs in one API call. This will happen asynchrono
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | credentials| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
+| apiKey    | credentials| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
 
 
 ## ClarifaiV2.mergeInputsConcepts
@@ -218,7 +216,7 @@ Merge concepts to inputs in bulk
 
 | Field                                        | Type       | Description
 |----------------------------------------------|------------|----------
-| accessToken                                  | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
+| apiKey                                  | credentials| Your Clarifai API key
 | inputs                                       | JSON       | List of concepts to update (max of 128 inputs/call; passing > 128 will throw an exception). 
 | inputs[].input                               | object     | 
 | inputs[].input.id                            | string     | The id of the input to update
@@ -267,7 +265,7 @@ Delete concepts to inputs in bulk
 
 | Field                                        | Type       | Description
 |----------------------------------------------|------------|----------
-| accessToken                                  | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
+| apiKey                                  | credentials| Your Clarifai API key
 | inputs                                       | JSON       | JSON Array of concepts to update (max of 128 inputs/call; passing > 128 will throw an exception). 
 | inputs[].input                               | object     | 
 | inputs[].input.id                            | string     | The id of the input to update
@@ -315,7 +313,7 @@ Overwrite inputs in bulk
 
 | Field                                   | Type       | Description
 |-----------------------------------------|------------|----------
-| accessToken                             | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
+| apiKey                             | credentials| Your Clarifai API key
 | inputs                                  | JSON       | List of concepts to update (max of 128 inputs/call; passing > 128 will throw an exception). 
 | inputs[].input                          | object     | 
 | inputs[].input.id                       | string     | The id of the input to update
@@ -364,7 +362,7 @@ Search for inputs or outputs based on concepts or images
 
 | Field                   | Type          | Description
 |-------------------------|---------------|----------
-| accessToken             | String   | This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
+| apiKey             | String   | This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
 | queries                 | JSON          | List of all predictions to match with
 | queries[].concept       | object        | An object with the following keys:
 | queries[].concept.type  | string        | Search over 'input' or 'output' (default: 'output')
@@ -393,7 +391,7 @@ Merge concepts to a model
 
 | Field                | Type       | Description
 |----------------------|------------|----------
-| accessToken          | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
+| apiKey          | credentials| Your Clarifai API key
 | id                   | String     | The id of the model to apply changes to
 | concepts             | JSON       | An array of concept objects or string
 | concepts[].concept.id| String     | The id of the concept to attach to the model
@@ -410,7 +408,7 @@ Remove concepts from a model
 
 | Field                | Type       | Description
 |----------------------|------------|----------
-| accessToken          | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
+| apiKey          | credentials| Your Clarifai API key
 | id                   | String     | The id of the model to apply changes to
 | concepts             | JSON       | List of concept objects with id. 
 | concepts[].concept.id| String     | The id of the concept to delete.
@@ -427,7 +425,7 @@ Once you have trained a model you are ready to use your new model to get predict
 
 | Field                     | Type       | Description
 |---------------------------|------------|----------
-| accessToken               | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
+| apiKey               | credentials| Your Clarifai API key
 | id                        | string     | Model's id
 | inputs                    | JSON       | An array of Inputs Objects. 
 | inputs[].data.image       | object     | Object with keys explained below:
@@ -450,7 +448,7 @@ When you train a model, you are telling the system to look at all the images wit
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
+| apiKey    | credentials| Your Clarifai API key
 | id             | string     | Model's id
 
 ## ClarifaiV2.getAllModels
@@ -458,7 +456,7 @@ Returns all the models
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
+| apiKey    | credentials| Your Clarifai API key
 | page           | Number     | The page number (optional, default: 1)
 | perPage        | Number     | Number of images to return per page (optional, default: 20)
 
@@ -467,7 +465,7 @@ You can create your own model and train it with your own images and concepts. On
 
 | Field                    | Type       | Description
 |--------------------------|------------|----------
-| accessToken              | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
+| apiKey              | credentials| Your Clarifai API key
 | modelId                  | string     | Model id
 | modelName                | string     | Model name
 | conceptsData             | JSON       | List of objects with ids, concept id strings or an instance of Concepts object. 
@@ -479,7 +477,7 @@ Update a model
 
 | Field                    | Type       | Description
 |--------------------------|------------|----------
-| accessToken              | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
+| apiKey              | credentials| Your Clarifai API key
 | modelId                  | string     | Model id
 | modelName                | string     | Model name
 | conceptsMutuallyExclusive| boolean    | Do you expect to see more than one of the concepts in this model in the SAME image? Set to false (default) if so. Otherwise, set to true.
@@ -490,7 +488,7 @@ Returns a model specified by ID
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
+| apiKey    | credentials| Your Clarifai API key
 | id             | String     | The model's id
 
 ## ClarifaiV2.getModelOutputInfo
@@ -498,7 +496,7 @@ The output info of a model lists what concepts it contains.
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
+| apiKey    | credentials| Your Clarifai API key
 | id             | String     | The model's id
 
 ## ClarifaiV2.getAllModelVersions
@@ -506,7 +504,7 @@ The output info of a model lists what concepts it contains.
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
+| apiKey    | credentials| Your Clarifai API key
 | id             | String     | The model's id
 
 ## ClarifaiV2.getModelVersion
@@ -514,7 +512,7 @@ To get a specific model version, you must provide the modelId as well as the ver
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
+| apiKey    | credentials| Your Clarifai API key
 | modelId        | String     | The model's id
 | versionId      | String     | The model version's id
 
@@ -523,7 +521,7 @@ You can list all the inputs that were used to train the model.
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
+| apiKey    | credentials| Your Clarifai API key
 | id             | String     | The model's id
 
 ## ClarifaiV2.getModelTrainingInputsByVersion
@@ -531,7 +529,7 @@ You can also list all the inputs that were used to train a specific model versio
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
+| apiKey    | credentials| Your Clarifai API key
 
 | modelId        | String     | The model's id
 | versionId      | String     | The model version's id
@@ -541,7 +539,7 @@ If you would like to delete all models associated with an application, you can a
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
+| apiKey    | credentials| Your Clarifai API key
 | modelId        | String     | If of model to delete
 | versionId      | String     | The model's version id
 
@@ -550,7 +548,7 @@ Deletes model by id
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
+| apiKey    | credentials| Your Clarifai API key
 | id             | String     | Model's id
 
 ## ClarifaiV2.deleteAllModels
@@ -558,5 +556,5 @@ Deletes all models
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | String| This is used to authorize your access to the API. To obtain key run `getAccessToken` method.
+| apiKey    | credentials| Your Clarifai API key
 

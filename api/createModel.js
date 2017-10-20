@@ -8,7 +8,7 @@ module.exports = (req, res) => {
     req.body.args = lib.clearArgs(req.body.args);
 
     let { 
-        accessToken,
+        apiKey,
         modelId,
         modelName,
         conceptsData,
@@ -16,7 +16,7 @@ module.exports = (req, res) => {
         conceptsMutuallyExclusive
     } = req.body.args;
         
-    let required = lib.parseReq({accessToken, modelId});
+    let required = lib.parseReq({apiKey, modelId});
 
     if(required.length > 0) 
         throw new RapidError('REQUIRED_FIELDS', required);
@@ -49,7 +49,7 @@ module.exports = (req, res) => {
         uri: 'https://api.clarifai.com/v2/models',
         method: 'POST',
         headers: {
-            'Authorization': 'Bearer ' + accessToken
+            'Authorization': 'Key ' + apiKey
         },
         json: body
     }, (err, response, reslut) => {
